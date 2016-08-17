@@ -3,3 +3,12 @@ setup/theme-readtheorg-local-abs.setup
 demo/mbacou.org
 demo/cdominik-muziek2.org
 demo/dev.org
+demo/
+*.org
+*.html
+*.png
+*.pdf
+*.jpeg
+*.jpg
+webfiles/
+ltxpng/
