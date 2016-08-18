@@ -1,7 +1,7 @@
 # -*- mode: org; -*-
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
-# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg-title.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg-top.css"/>

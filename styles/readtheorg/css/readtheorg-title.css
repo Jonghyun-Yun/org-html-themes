@@ -22,6 +22,10 @@ Custom CSS
     z-index: 500; /* NO overlap in title area*/
 }
 
+.subtitle{
+    font-size:50%; /* of h1 */ /* decrease size from 95% to 50%*/
+}
+
 /* Up link properties */
 #org-div-home-and-up{text-align: right;
                      margin: 5px;
