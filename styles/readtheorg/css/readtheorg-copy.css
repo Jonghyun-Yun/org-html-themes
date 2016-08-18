@@ -28,7 +28,7 @@ h1{
 }
 
 .subtitle{
-    font-size:95%; /* of h1 */
+    font-size:50%; /* of h1 */ /* decrease size from 95% to 50%*/
 }
 
 h2{
@@ -77,8 +77,8 @@ body{
 #content{
     background:#fcfcfc;
     height:100%;
-    margin-left:300px;
-    /* margin:auto; */
+    /* margin-left:300px; */
+    margin:auto;
     max-width:800px;
     min-height:100%;
     padding:1.618em 3.236em;
@@ -129,7 +129,7 @@ dd{
     margin-left:24px}
 
 #content .section ul li p:last-child,#content .toctree-wrapper ul li p:last-child,article ul li p:last-child{
-                                                                                                                                  margin-bottom:0}
+    margin-bottom:0}
 
 #content .section ul li ul,#content .toctree-wrapper ul li ul,article ul li ul{
     margin-bottom:0}
@@ -153,7 +153,7 @@ dd{
     margin-left:24px}
 
 #content .section ol li p:last-child,#content ol li p:last-child,article ol li p:last-child{
-                                                                                                                           margin-bottom:0}
+    margin-bottom:0}
 
 #content .section ol li ul,#content ol li ul,article ol li ul{
     margin-bottom:0}
@@ -445,7 +445,7 @@ table tr:nth-child(2n) td{
 
     #toggle-sidebar {
         background-color: #2980B9;
-        display: block;
+        display: none;
         margin-bottom: 1.6em;
         padding: 0.6em;
         text-align: center;
@@ -460,10 +460,10 @@ table tr:nth-child(2n) td{
     }
 
     #table-of-contents .close-sidebar {
-       color: rgba(255, 255, 255, 0.3);
-       display: inline-block;
-       margin: 0px 10px 0px 45px;
-       padding: 10px;
+        color: rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        margin: 0px 10px 0px 45px;
+        padding: 10px;
     }
 }
 
@@ -694,7 +694,8 @@ hr{
 #table-of-contents li{
     list-style:none;
     margin-left: 0px;
-}
+    display: inline;
+    }
 
 #table-of-contents header{
     height:32px;
@@ -767,7 +768,7 @@ hr{
     display:inline-block;
     line-height:18px;
     padding:0.4045em 1.618em;
-    display:block;
+    display:inline; /* changed from block*/
     position:relative;
     font-size:90%;
     color:#b3b3b3;
@@ -784,11 +785,17 @@ hr{
 
 #table-of-contents{
     position:fixed;
-    top:0;
+    top:5.5em;
     left:0;
-    width:300px;
+    /* width:300px; */
+    width:100%;  /* TOC width changed*/
+    margin: 0;
+    padding: 0;
+    padding: 0.25em 3em; /* TOC size changed*/
+    list-style: none
     overflow-x:hidden;
-    overflow-y:scroll;
+    /* overflow-y:scroll; */  /* TOC scroll bar hidden*/
+    list-style: none
     height:100%;
     background:#343131;
     z-index:200;
@@ -803,7 +810,7 @@ hr{
     background-color:#2980B9;
     text-align:center;
     padding:0.809em;
-    display:block;
+    display:none;  /* TOC heading hidden*/
     color:#fcfcfc;
     font-size: 100%;
     margin-bottom:0.809em}
