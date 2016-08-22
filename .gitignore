@@ -11,6 +11,7 @@ demo/
 *.jpeg
 *.jpg
 *.docx
+*.tex
 webfiles/
 ltxpng/
 styles/other/
