@@ -1,0 +1,40 @@
+.org-bold {
+  /* bold */
+  font-weight: bold;
+}
+.org-builtin {
+  /* font-lock-builtin-face */
+  color: #B71C1C;
+}
+.org-comment {
+  /* font-lock-comment-face */
+  color: #607d8b;
+}
+.org-comment-delimiter {
+  /* font-lock-comment-delimiter-face */
+  color: #607d8b;
+}
+.org-doc {
+  /* font-lock-doc-face */
+  color: #673ab7;
+}
+.org-flyspell-duplicate {
+  /* flyspell-duplicate */
+  text-decoration: underline;
+}
+.org-function-name {
+  /* font-lock-function-name-face */
+  color: #0097A7;
+}
+.org-keyword {
+  /* font-lock-keyword-face */
+  color: #00796b;
+}
+.org-string {
+  /* font-lock-string-face */
+  color: #689f38;
+}
+.org-variable-name {
+  /* font-lock-variable-name-face */
+  color: #EF6C00;
+}
