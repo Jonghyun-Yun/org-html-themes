@@ -29,13 +29,18 @@ h4:before {
 ReadtheOrg Side TOC
 */
 #content{
+    /* position:relative; */
     background:#fcfcfc;
     height:100%;
-    margin-left:300px;
-    /* margin:auto; */
-    max-width:800px;
+    /* margin-left:300px; */
+    margin:auto;
+    max-width:900px;
     min-height:100%;
     padding:1.618em 3.236em;
+}
+
+body{
+    margin-left:300px;
 }
 
 @media screen and (max-width: 768px) {
@@ -45,6 +50,9 @@ ReadtheOrg Side TOC
         margin-bottom: 1.6em;
         padding: 0.6em;
         text-align: center;
+    }
+    body{
+        margin-left:0;
     }
 }
 

@@ -179,8 +179,8 @@ dl dd{
     pre.src,blockquote{
         page-break-inside:avoid}
 
-    thead{
-        display:table-header-group}
+    /* thead{ */
+    /*     display:table-header-group} */
 
     tr,img{
         page-break-inside:avoid}

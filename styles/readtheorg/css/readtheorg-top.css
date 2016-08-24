@@ -59,7 +59,7 @@ ReadtheOrg Top TOC
     overflow-y:hidden; /* TOC scroll bar hidden*/
     height:auto; /* set TOC height to default*/
     background:#343131;
-    z-index:200;
+    /* z-index:200; */
     scrollbar-base-color: #1F1D1D;
     scrollbar-arrow-color: #b3b3b3;
     scrollbar-shadow-color: #1F1D1D;
@@ -67,7 +67,7 @@ ReadtheOrg Top TOC
 }
 
 #table-of-contents h2{
-    z-index:200;
+    /* z-index:200; */
     background-color:#2980B9;
     text-align:center;
     padding:0.809em;
