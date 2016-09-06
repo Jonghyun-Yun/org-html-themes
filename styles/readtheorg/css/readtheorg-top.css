@@ -23,13 +23,6 @@ ReadtheOrg Top TOC
 }
 
 @media screen and (max-width: 768px) {
-    #table-of-contents {
-        display: inline-block;
-        width: 10%;
-    }
-    #copyright {
-        display: inline;
-    }
     #toggle-sidebar {
         background-color: #2980B9;
         display: none;
@@ -86,14 +79,6 @@ ReadtheOrg Top TOC
 /*
 Copyright at Bottom
 */
-@media screen and (max-width: 768px){
-    #copyright{
-        width:100%;
-        display:inline-block}
-
-    #copyright.shift{
-        display:inline-block}
-}
 
 #copyright {
     display: inline-block;
@@ -115,3 +100,9 @@ Copyright at Bottom
 #copyright a{
     color:#2980B9;
     text-decoration:none}
+
+@media screen and (max-width: 768px) {
+    #copyright {
+        display: none;
+    }
+}
