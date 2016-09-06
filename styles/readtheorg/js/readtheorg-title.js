@@ -5,7 +5,7 @@ $( document ).ready(function() {
     $('body').scrollspy({target: '#text-table-of-contents'});
 
     // add sticky table headers
-    var offset = $('.title').height() + $('.subtitle').height() + 7;
+    var offset = $('.title').height() + $('.subtitle').height();
     $('table').stickyTableHeaders({fixedOffset: offset});
 
     // set the height of tableOfContents

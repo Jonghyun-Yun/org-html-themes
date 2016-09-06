@@ -17,12 +17,19 @@ ReadtheOrg Top TOC
     height:100%;
     /* margin-left:300px; */
     margin:auto;
-    max-width:800px;
+    max-width:900px;
     min-height:100%;
     padding:1.618em 3.236em;
 }
 
 @media screen and (max-width: 768px) {
+    #table-of-contents {
+        display: inline-block;
+        width: 10%;
+    }
+    #copyright {
+        display: inline;
+    }
     #toggle-sidebar {
         background-color: #2980B9;
         display: none;
@@ -75,3 +82,36 @@ ReadtheOrg Top TOC
     color:#fcfcfc;
     font-size: 100%;
     margin-bottom:0.809em}
+
+/*
+Copyright at Bottom
+*/
+@media screen and (max-width: 768px){
+    #copyright{
+        width:100%;
+        display:inline-block}
+
+    #copyright.shift{
+        display:inline-block}
+}
+
+#copyright {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #343131;
+    border-top: none;
+    text-align: center;
+    color: #b3b3b3;
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-size: 90%;
+    z-index:400;
+    padding: 0.5rem;
+}
+
+#copyright a{
+    color:#2980B9;
+    text-decoration:none}
