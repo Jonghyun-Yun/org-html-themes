@@ -1,12 +1,3 @@
-/*
-Custom CSS
-*/
-.container
-{
-    /* max-width: 50em; */
-    /* margin: 0; */
-}
-
 /* Banner or Header */
 .title
 {
@@ -20,6 +11,7 @@ Custom CSS
     left:0;
     top:0;
     z-index: 500; /* NO overlap in title area*/
+    /* white-space: nowrap /\* prevent line break *\/ */
 }
 
 .subtitle{
@@ -52,4 +44,19 @@ Custom CSS
 #org-div-home-and-up a:hover,a:active{
     /* color: #C0C0C0; */
     color: #ccffcc;
+}
+
+@media screen and (max-width: 768px) {
+    #org-div-home-and-up {
+        display: none;
+    }
+    .title {
+        position: relative;
+        background: inherit;
+        color: inherit;
+    }
+    html {
+        margin-left: -45px;
+        margin-right: -45px;
+    }
 }

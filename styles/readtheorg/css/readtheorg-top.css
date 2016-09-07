@@ -9,6 +9,10 @@ h2:before {
     visibility: hidden;
 }
 
+@media screen and (max-width: 768px) {
+    h2:before {display:none}
+}
+
 /*
 ReadtheOrg Top TOC
 */
