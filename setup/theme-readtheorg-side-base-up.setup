@@ -5,4 +5,4 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles/readtheorg/css/readtheorg-title.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles/readtheorg/css/readtheorg-side.css"/>
 
-#+HTML_HEAD: <script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
+# #+HTML_HEAD: <script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>

@@ -1,6 +1,6 @@
 # -*- mode: org; -*-
 
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/lib/css/material-light-theme.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/lib/css/material-light-htmlize.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
