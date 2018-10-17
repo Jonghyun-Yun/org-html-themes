@@ -1,4 +1,4 @@
-#+TITLE:     How you export Org mode files into awesome HTML in 2 minutes
+#+TITLE:     How to export Org mode files into awesome HTML in 2 minutes
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
 #+DESCRIPTION: Org-HTML export made simple.
@@ -139,11 +139,11 @@ Keyboard shortcuts to save time and boost your productivity:
 
 ** ReadTheOrg
 
-ReadTheOrg is a clone of the official -- and great! -- theme (called [[https://github.com/snide/sphinx_rtd_theme][Sphinx]])
+ReadTheOrg is a clone of the official -- and great! --  [[https://github.com/snide/sphinx_rtd_theme][theme]]
 used in the [[http://docs.readthedocs.org/en/latest/][Read The Docs]] site.  It gives a beautiful and professional style to
 all your Org docs.
 
-*Thanks to the creator(s) of Sphinx!*
+*Thanks to its creator(s)!*
 
 #+ATTR_HTML: :width 640
 [[file:readtheorg.png]]
@@ -280,9 +280,10 @@ I love contributions!  Patches under any form are always welcome!
 
 ** Donations
 
-If you like the org-html-themes project (or any of [[https://github.com/fniessen/][my other projects]]), you can
-show your appreciation and help support future development by making today
-a [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][donation]] through PayPal.
+If you use the org-html-themes project (or any of [[https://github.com/fniessen/][my other projects]]) and feel it
+is making your life better and easier, you can show your appreciation and help
+support future development by making today a [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][donation]] through PayPal.  Thank
+you!
 
 Regardless of the donations, org-html-themes will always be free both as in
 beer and as in speech.
@@ -293,7 +294,7 @@ I have an [[https://twitter.com/f_niessen][f_niessen]] account on Twitter.  You 
 
 * License
 
-Copyright (C) 2011-2016 Fabrice Niessen.
+Copyright (C) 2011-2017 Fabrice Niessen.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
