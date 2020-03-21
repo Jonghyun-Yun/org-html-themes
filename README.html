@@ -70,6 +70,7 @@
   pre.src-fortran:before { content: 'Fortran'; }
   pre.src-gnuplot:before { content: 'gnuplot'; }
   pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
   pre.src-java:before { content: 'Java'; }
   pre.src-js:before { content: 'Javascript'; }
   pre.src-latex:before { content: 'LaTeX'; }
@@ -162,6 +163,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -181,12 +195,12 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
 </head>
 <body>
 <div id="content">
@@ -195,44 +209,41 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge7110c3">1. Overview</a>
+<li><a href="#orgf4436e9">1. Overview</a>
 <ul>
-<li><a href="#orgeda597d">1.1. Description</a></li>
-<li><a href="#org08fcdef">1.2. Requirements</a></li>
+<li><a href="#orgfc7191b">1.1. Description</a></li>
+<li><a href="#orge2273a5">1.2. Requirements</a></li>
 </ul>
 </li>
-<li><a href="#org737f23e">2. Quotations</a>
+<li><a href="#org01b63e2">2. Quotations</a>
 <ul>
-<li><a href="#org8a1cd9f">2.1. About Bigblow</a></li>
-<li><a href="#orgdd9e88b">2.2. About ReadTheOrg</a></li>
+<li><a href="#orge2f1186">2.1. About Bigblow</a></li>
+<li><a href="#org094f9ff">2.2. About ReadTheOrg</a></li>
 </ul>
 </li>
-<li><a href="#orgca13ed5">3. Gallery</a>
+<li><a href="#org80c846f">3. Gallery</a>
 <ul>
-<li><a href="#org19cec68">3.1. Bigblow</a></li>
-<li><a href="#org7bbc4d8">3.2. ReadTheOrg</a></li>
+<li><a href="#orgccd7d39">3.1. Bigblow</a></li>
+<li><a href="#org6678a73">3.2. ReadTheOrg</a></li>
 </ul>
 </li>
-<li><a href="#orgfbae72b">4. Demo</a></li>
-<li><a href="#org75261c6">5. Installing a theme</a>
+<li><a href="#orged5c1a6">4. Demo</a></li>
+<li><a href="#orga7d4639">5. Using a theme</a></li>
+<li><a href="#org6d58b80">6. Customizing a theme</a>
 <ul>
-<li><a href="#org44f7209">5.1. Bigblow</a>
-<ul>
-<li><a href="#org7ec1099">Local version</a></li>
+<li><a href="#org7eae824">6.1. Change the background code blocks</a></li>
+<li><a href="#orge2aa2c3">6.2. Unset body width limit of ReadTheOrg</a></li>
 </ul>
 </li>
-<li><a href="#orgc0fe6ac">5.2. ReadTheOrg</a></li>
-</ul>
-</li>
-<li><a href="#org511d172">6. Contributing</a>
+<li><a href="#org6072744">7. Contributing</a>
 <ul>
-<li><a href="#org731eaa6">6.1. Issues</a></li>
-<li><a href="#orge68ebf4">6.2. Patches</a></li>
-<li><a href="#orga5ab77a">6.3. Donations</a></li>
-<li><a href="#orgabe81b8">6.4. Follow me</a></li>
+<li><a href="#org206c105">7.1. Issues</a></li>
+<li><a href="#orga6db2ec">7.2. Patches</a></li>
+<li><a href="#org36d8be1">7.3. Donations</a></li>
+<li><a href="#org993b69e">7.4. Follow me</a></li>
 </ul>
 </li>
-<li><a href="#org80712dc">7. License</a></li>
+<li><a href="#orgd031769">8. License</a></li>
 </ul>
 </div>
 </div>
@@ -243,11 +254,12 @@
 <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
 </a>
 
-<div id="outline-container-orge7110c3" class="outline-2">
-<h2 id="orge7110c3"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-orgf4436e9" class="outline-2">
+<h2 id="orgf4436e9"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-orgeda597d" class="outline-3">
-<h3 id="orgeda597d"><span class="section-number-3">1.1</span> Description</h3>
+</div>
+<div id="outline-container-orgfc7191b" class="outline-3">
+<h3 id="orgfc7191b"><span class="section-number-3">1.1</span> Description</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Though you can easily override CSS stylesheets and add your own HTML themes, we
@@ -273,8 +285,8 @@ Follow <a href="https://twitter.com/f_niessen">f_niessen</a> on Twitter for upda
 </div>
 </div>
 
-<div id="outline-container-org08fcdef" class="outline-3">
-<h3 id="org08fcdef"><span class="section-number-3">1.2</span> Requirements</h3>
+<div id="outline-container-orge2273a5" class="outline-3">
+<h3 id="orge2273a5"><span class="section-number-3">1.2</span> Requirements</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Org mode version 8 (or later) is required.
@@ -287,11 +299,12 @@ If such a version is not bundled with your Emacs, install one from ELPA.
 </div>
 </div>
 
-<div id="outline-container-org737f23e" class="outline-2">
-<h2 id="org737f23e"><span class="section-number-2">2</span> Quotations</h2>
+<div id="outline-container-org01b63e2" class="outline-2">
+<h2 id="org01b63e2"><span class="section-number-2">2</span> Quotations</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-org8a1cd9f" class="outline-3">
-<h3 id="org8a1cd9f"><span class="section-number-3">2.1</span> About Bigblow</h3>
+</div>
+<div id="outline-container-orge2f1186" class="outline-3">
+<h3 id="orge2f1186"><span class="section-number-3">2.1</span> About Bigblow</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 &ldquo;Very very nice, I enjoy it a lot.&rdquo; <br />
@@ -332,8 +345,8 @@ wonderful package!&rdquo; <br />
 </div>
 </div>
 
-<div id="outline-container-orgdd9e88b" class="outline-3">
-<h3 id="orgdd9e88b"><span class="section-number-3">2.2</span> About ReadTheOrg</h3>
+<div id="outline-container-org094f9ff" class="outline-3">
+<h3 id="org094f9ff"><span class="section-number-3">2.2</span> About ReadTheOrg</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 &ldquo;OMG. The ReadTheOrg theme for exported HTML from org mode files is eye
@@ -373,8 +386,8 @@ available.&rdquo; <br />
 </div>
 </div>
 
-<div id="outline-container-orgca13ed5" class="outline-2">
-<h2 id="orgca13ed5"><a id="ID-79e0ed21-c3b0-4f00-bdab-29fbff9dcad4"></a><span class="section-number-2">3</span> Gallery</h2>
+<div id="outline-container-org80c846f" class="outline-2">
+<h2 id="org80c846f"><span class="section-number-2">3</span> Gallery</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 This is a list of available <b>HTML themes for Org mode</b>, which you can use right
@@ -382,8 +395,8 @@ now!  Well, I hope to have more than one in a couple of weeks&#x2026;
 </p>
 </div>
 
-<div id="outline-container-org19cec68" class="outline-3">
-<h3 id="org19cec68"><span class="section-number-3">3.1</span> Bigblow</h3>
+<div id="outline-container-orgccd7d39" class="outline-3">
+<h3 id="orgccd7d39"><span class="section-number-3">3.1</span> Bigblow</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Bigblow is perfect for your work: it is a clean design aimed at optimal <b>Org
@@ -483,17 +496,17 @@ Keyboard shortcuts to save time and boost your productivity:
 </div>
 </div>
 
-<div id="outline-container-org7bbc4d8" class="outline-3">
-<h3 id="org7bbc4d8"><span class="section-number-3">3.2</span> ReadTheOrg</h3>
+<div id="outline-container-org6678a73" class="outline-3">
+<h3 id="org6678a73"><span class="section-number-3">3.2</span> ReadTheOrg</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
-ReadTheOrg is a clone of the official &#x2013; and great! &#x2013; theme (called <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx</a>)
+ReadTheOrg is a clone of the official &#x2013; and great! &#x2013;  <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
 used in the <a href="http://docs.readthedocs.org/en/latest/">Read The Docs</a> site.  It gives a beautiful and professional style to
 all your Org docs.
 </p>
 
 <p>
-<b>Thanks to the creator(s) of Sphinx!</b>
+<b>Thanks to its creator(s)!</b>
 </p>
 
 
@@ -519,8 +532,8 @@ default structure of the HTML export)!
 </div>
 </div>
 
-<div id="outline-container-orgfbae72b" class="outline-2">
-<h2 id="orgfbae72b"><span class="section-number-2">4</span> Demo</h2>
+<div id="outline-container-orged5c1a6" class="outline-2">
+<h2 id="orged5c1a6"><span class="section-number-2">4</span> Demo</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 I&rsquo;ve written a demo page for the themes that provides a maximal working support
@@ -534,180 +547,126 @@ admonitions, footnotes, tables and other details.
 </div>
 </div>
 
-<div id="outline-container-org75261c6" class="outline-2">
-<h2 id="org75261c6"><span class="section-number-2">5</span> Installing a theme</h2>
+<div id="outline-container-orga7d4639" class="outline-2">
+<h2 id="orga7d4639"><span class="section-number-2">5</span> Using a theme</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-Using a theme from the <a href="#orgca13ed5">theme gallery</a> for your own Org documents is very easy:
-you just need to clone the Org-HTML themes project, add a <code>#+SETUPFILE:</code> directive
-in the preamble to include the CSS and JavaScript files, then export your Org
-mode file to HTML.
+Using a theme from the <a href="#org80c846f">theme gallery</a> for your own Org documents is very easy:
+</p>
+
+<ol class="org-ol">
+<li><p>
+You <b>add a</b> <code>#+SETUPFILE:</code> <b>directive</b> in the preamble of your document (to include
+the necessary CSS and JavaScript files).
 </p>
 
 <p>
-You can either:
-</p>
-
-<ul class="org-ul">
-<li><p>
-copy the &ldquo;setup file&rdquo; of the chosen theme to the directory of your Org files,
+You can either use an URL of the following type for the &ldquo;setup file&rdquo; of your
+chosen theme:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span class="org-org-meta-line">  #+SETUPFILE: THEME-NAME.setup</span>
+<pre class="src src-org"><span class="org-org-meta-line">   #+SETUPFILE: <a href="https://fniessen.github.io/org-html-themes/setup/THEME-NAME.setup">https://fniessen.github.io/org-html-themes/setup/THEME-NAME.setup</a></span>
 </pre>
 </div>
 
 <p>
-or
-</p></li>
+(where <code>THEME-NAME</code> is <code>theme-bigblow</code> or <code>theme-readtheorg</code>)
+</p>
 
-<li><p>
-use the (relative or absolute) path to the &ldquo;setup file&rdquo; (in your Git local
-repository)
+<p>
+or, if you <b>cloned or downloaded</b> the Org-HTML themes project &#x2013; to get no
+dependency on an Internet connection &#x2013;, use a (relative or absolute) path to
+the local &ldquo;setup file&rdquo; and copy the &ldquo;styles&rdquo; folder from the cloned folder into the same folder as the file you want to export:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span class="org-org-meta-line">  #+SETUPFILE: path/to/Git/repo/setup/THEME-NAME.setup</span>
+<pre class="src src-org"><span class="org-org-meta-line">   #+SETUPFILE: path/to/Git/repo/setup/THEME-NAME-local.setup</span>
 </pre>
 </div></li>
-</ul>
 
-<p>
-Then export your Org mode file to HTML with <code>org-html-export-to-html</code> or with <code>C-c
-C-e h h</code>.
-</p>
-</div>
-
-<div id="outline-container-org44f7209" class="outline-3">
-<h3 id="org44f7209"><span class="section-number-3">5.1</span> Bigblow</h3>
-<div class="outline-text-3" id="text-5-1">
-<p>
-In order to use the Bigblow style, just copy the <a href="setup/theme-bigblow.setup">theme-bigblow.setup</a> file to
-your project and link to it this way:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org"><span class="org-org-meta-line">#+SETUPFILE: theme-bigblow.setup</span>
-</pre>
-</div>
-
-<p>
-If you prefer, you can add the content of the setup file at the beginning of
-your Org file instead:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org"><span class="org-comment"># -*- mode: org; -*-</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="<a href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css&quot;/">http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/</a>&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="<a href="http://www.pirilampo.org/styles/bigblow/css/bigblow.css&quot;/">http://www.pirilampo.org/styles/bigblow/css/bigblow.css"/</a>&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="<a href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css&quot;/">http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/</a>&gt;</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js">http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js">http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js</a>"&gt;&lt;/script&gt;</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js">http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js">http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js">http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/bigblow/js/bigblow.js">http://www.pirilampo.org/styles/bigblow/js/bigblow.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/bigblow/js/hideshow.js">http://www.pirilampo.org/styles/bigblow/js/hideshow.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js">http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js</a>"&gt;&lt;/script&gt;</span>
-</pre>
+<li>Then, you <b>export</b> your Org mode file <b>to HTML</b> with <code>org-html-export-to-html</code> or
+with <code>C-c C-e h h</code>.</li>
+</ol>
 </div>
 </div>
 
-<div id="outline-container-org7ec1099" class="outline-4">
-<h4 id="org7ec1099">Local version</h4>
-<div class="outline-text-4" id="text-org7ec1099">
-<p>
-Here a local version (using relative paths):
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org"><span class="org-comment"># -*- mode: org; -*-</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="styles/bigblow/css/hideshow.css"/&gt;</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/bigblow/js/jquery-1.11.0.min.js"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/bigblow/js/jquery-ui-1.10.2.min.js"&gt;&lt;/script&gt;</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/bigblow/js/jquery.localscroll-min.js"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/bigblow/js/jquery.zclip.min.js"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/bigblow/js/bigblow.js"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/bigblow/js/hideshow.js"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"&gt;&lt;/script&gt;</span>
-</pre>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgc0fe6ac" class="outline-3">
-<h3 id="orgc0fe6ac"><span class="section-number-3">5.2</span> ReadTheOrg</h3>
-<div class="outline-text-3" id="text-5-2">
-<p>
-In order to use the ReadTheOrg style, just copy the <a href="setup/theme-readtheorg.setup">theme-readtheorg.setup</a> file
-to your project and link to it this way:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org"><span class="org-org-meta-line">#+SETUPFILE: theme-readtheorg.setup</span>
-</pre>
-</div>
-
-<p>
-If you prefer, you can add the content of the setup file at the beginning of
-your Org file instead:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org"><span class="org-comment"># -*- mode: org; -*-</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="<a href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css&quot;/">http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/</a>&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="<a href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css&quot;/">http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/</a>&gt;</span>
-
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script src="<a href="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script src="<a href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js">http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js</a>"&gt;&lt;/script&gt;</span>
-<span class="org-org-meta-line">#+HTML_HEAD: &lt;script type="text/javascript" src="<a href="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js">http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js</a>"&gt;&lt;/script&gt;</span>
-</pre>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org511d172" class="outline-2">
-<h2 id="org511d172"><span class="section-number-2">6</span> Contributing</h2>
+<div id="outline-container-org6d58b80" class="outline-2">
+<h2 id="org6d58b80"><span class="section-number-2">6</span> Customizing a theme</h2>
 <div class="outline-text-2" id="text-6">
-</div><div id="outline-container-org731eaa6" class="outline-3">
-<h3 id="org731eaa6"><span class="section-number-3">6.1</span> Issues</h3>
+<p>
+You love those themes, but you still would like to override particular HTML
+tags?  Some examples do follow&#x2026;
+</p>
+
+<p>
+Before doing that, though, if you think it really is an improvement that could
+server other persons as well, including me, you&rsquo;re invited to submit your
+change&#x2026;
+</p>
+</div>
+
+<div id="outline-container-org7eae824" class="outline-3">
+<h3 id="org7eae824"><span class="section-number-3">6.1</span> Change the background code blocks</h3>
 <div class="outline-text-3" id="text-6-1">
+<p>
+Here&rsquo;s an example to insert into your Org documents:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span class="org-comment"># Change the background of source block.</span>
+<span class="org-org-meta-line">#+HTML_HEAD: &lt;style&gt;pre.src{background:#343131;color:white;} &lt;/style&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge2aa2c3" class="outline-3">
+<h3 id="orge2aa2c3"><span class="section-number-3">6.2</span> Unset body width limit of ReadTheOrg</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Solution provided by Malcolm Cook:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span class="org-org-meta-line">#+HTML_HEAD: &lt;style&gt; #content{max-width:1800px;}&lt;/style&gt;</span>
+<span class="org-org-meta-line">#+HTML_HEAD: &lt;style&gt; p{max-width:800px;}&lt;/style&gt;</span>
+<span class="org-org-meta-line">#+HTML_HEAD: &lt;style&gt; li{max-width:800px;}&lt;/style</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6072744" class="outline-2">
+<h2 id="org6072744"><span class="section-number-2">7</span> Contributing</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org206c105" class="outline-3">
+<h3 id="org206c105"><span class="section-number-3">7.1</span> Issues</h3>
+<div class="outline-text-3" id="text-7-1">
 <p>
 Report issues and suggest features and improvements on the <a href="https://github.com/fniessen/org-html-themes/issues/new">GitHub issue tracker</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge68ebf4" class="outline-3">
-<h3 id="orge68ebf4"><span class="section-number-3">6.2</span> Patches</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-orga6db2ec" class="outline-3">
+<h3 id="orga6db2ec"><span class="section-number-3">7.2</span> Patches</h3>
+<div class="outline-text-3" id="text-7-2">
 <p>
 I love contributions!  Patches under any form are always welcome!
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga5ab77a" class="outline-3">
-<h3 id="orga5ab77a"><span class="section-number-3">6.3</span> Donations</h3>
-<div class="outline-text-3" id="text-6-3">
+<div id="outline-container-org36d8be1" class="outline-3">
+<h3 id="org36d8be1"><span class="section-number-3">7.3</span> Donations</h3>
+<div class="outline-text-3" id="text-7-3">
 <p>
 If you use the org-html-themes project (or any of <a href="https://github.com/fniessen/">my other projects</a>) and feel it
 is making your life better and easier, you can show your appreciation and help
-support future development by making today a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=VCVAS6KPDQ4JC&amp;lc=BE&amp;item_number=org-html-themes&amp;currency_code=EUR&amp;bn=PP-DonationsBF:btn_donate_LG.gif:NonHosted">donation</a> through PayPal.  Thank
+support future development by making today a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=VCVAS6KPDQ4JC&amp;lc=BE&amp;item_number=org%2dhtml%2dthemes&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">donation</a> through PayPal.  Thank
 you!
 </p>
 
@@ -718,9 +677,9 @@ beer and as in speech.
 </div>
 </div>
 
-<div id="outline-container-orgabe81b8" class="outline-3">
-<h3 id="orgabe81b8"><span class="section-number-3">6.4</span> Follow me</h3>
-<div class="outline-text-3" id="text-6-4">
+<div id="outline-container-org993b69e" class="outline-3">
+<h3 id="org993b69e"><span class="section-number-3">7.4</span> Follow me</h3>
+<div class="outline-text-3" id="text-7-4">
 <p>
 I have an <a href="https://twitter.com/f_niessen">f_niessen</a> account on Twitter.  You should follow it.
 </p>
@@ -728,11 +687,11 @@ I have an <a href="https://twitter.com/f_niessen">f_niessen</a> account on Twitt
 </div>
 </div>
 
-<div id="outline-container-org80712dc" class="outline-2">
-<h2 id="org80712dc"><span class="section-number-2">7</span> License</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgd031769" class="outline-2">
+<h2 id="orgd031769"><span class="section-number-2">8</span> License</h2>
+<div class="outline-text-2" id="text-8">
 <p>
-Copyright (C) 2011-2017 Fabrice Niessen.
+Copyright (C) 2011-2018 Fabrice Niessen.
 </p>
 
 <p>

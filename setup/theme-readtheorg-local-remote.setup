@@ -12,10 +12,3 @@
 #+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="https://wweb.uta.edu/faculty/yunj/styles/lib/js/jquery.stickytableheaders.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="https://wweb.uta.edu/faculty/yunj/styles/readtheorg/js/readtheorg.js"></script>
-
-# Contents of [[../setup/theme-readtheorg-side.setup]]
-
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://wweb.uta.edu/faculty/yunj/styles/readtheorg/css/readtheorg-title.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://wweb.uta.edu/faculty/yunj/styles/readtheorg/css/readtheorg-side.css"/>
-
-# #+HTML_HEAD: <script type="text/javascript" src="https://wweb.uta.edu/faculty/yunj/styles/readtheorg/js/readtheorg-title.js"></script>

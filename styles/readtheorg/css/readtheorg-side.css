@@ -1,6 +1,7 @@
 /*
 Hash Tag Links That Don’t Headbutt The Browser Window
 */
+
 h2:before {
     display: block;
     content: " ";
@@ -72,7 +73,8 @@ body{
 
 #table-of-contents{
     position:fixed;
-    top:5.5em; /* TOC location */
+    top:5.48em; /* TOC location */
+    margin-bottom: 101px;
     left:0;
     width:300px;
     overflow-x:hidden;
@@ -93,5 +95,6 @@ body{
     padding:0.809em;
     display:block;
     color:#fcfcfc;
-    font-size: 100%;
-    margin-bottom:0.809em}
+    font-size: 90%;
+    margin-bottom:0.809em
+}

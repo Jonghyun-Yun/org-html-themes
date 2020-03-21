@@ -1,4 +1,9 @@
 /* Banner or Header */
+
+body {
+    margin-top: 71px;
+}
+
 .title
 {
     position: fixed;
@@ -47,6 +52,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    #content .sidebar{
+        height: 400px;
+    }
+    body {
+        margin-top: 0;
+    }
     #org-div-home-and-up {
         display: none;
     }

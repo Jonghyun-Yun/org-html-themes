@@ -1,6 +1,10 @@
 /*
 Hash Tag Links That Don’t Headbutt The Browser Window
 */
+body {
+    margin-top: 101px;
+}
+
 h2:before {
     display: block;
     content: " ";
@@ -33,6 +37,9 @@ ReadtheOrg Top TOC
         margin-bottom: 1.6em;
         padding: 0.6em;
         text-align: center;
+    }
+    body{
+        margin-left:0;
     }
 }
 
