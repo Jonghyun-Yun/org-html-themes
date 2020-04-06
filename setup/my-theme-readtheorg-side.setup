@@ -1,0 +1,8 @@
+# -*- mode: org; -*-
+
+#+SETUPFILE: my-theme-readtheorg.setup
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg-title.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg-side.css"/>
+
+# #+HTML_HEAD: <script type="text/javascript" src="styles/readtheorg/js/readtheorg-title.js"></script>
